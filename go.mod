@@ -1,5 +1,8 @@
-module github.com/ipfs/go-log/v2
+module github.com/TRON-US/go-log/v2
 
-require go.uber.org/zap v1.14.1
+require (
+	github.com/steveyeom/go-btfs-logclient v0.0.0-20200511210241-1e009aafe09d
+	github.com/TRON-US/zap v2.0.0
+)
 
 go 1.12

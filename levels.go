@@ -1,6 +1,6 @@
 package log
 
-import "go.uber.org/zap/zapcore"
+import "github.com/TRON-US/zap/zapcore"
 
 // LogLevel represents a log severity level. Use the package variables as an
 // enum.

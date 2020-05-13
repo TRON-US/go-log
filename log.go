@@ -6,7 +6,8 @@ package log
 import (
 	"time"
 
-	"go.uber.org/zap"
+	"github.com/TRON-US/zap"
+	"github.com/steveyeom/go-btfs-logclient/logclient"
 )
 
 // StandardLogger provides API compatibility with standard printf loggers
@@ -33,7 +34,7 @@ type EventLogger interface {
 }
 
 // Logger retrieves an event logger by name
-func Logger(system string) *ZapEventLogger {
+func Logger(system string, outChan chan []logclient.Entry) *ZapEventLogger {
 	if len(system) == 0 {
 		setuplog := getLogger("setup-logger")
 		setuplog.Error("Missing name parameter")
@@ -41,6 +42,18 @@ func Logger(system string) *ZapEventLogger {
 	}
 
 	logger := getLogger(system)
+
+	return &ZapEventLogger{system: system, SugaredLogger: *logger}
+}
+
+func LoggerWithChannel(system string, outChan chan []logclient.Entry) *ZapEventLogger {
+	if len(system) == 0 {
+		setuplog := getLogger("setup-logger")
+		setuplog.Error("Missing name parameter")
+		system = "undefined"
+	}
+
+	logger := getLoggerWithOutChannel(system, outChan)
 
 	return &ZapEventLogger{system: system, SugaredLogger: *logger}
 }
