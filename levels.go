@@ -1,7 +1,7 @@
 package log
 
 import (
-	log2 "github.com/ipfs/go-log/v2"
+	log2 "github.com/TRON-US/go-log/v2"
 )
 
 // LogLevel represents a log severity level. Use the package variables as an

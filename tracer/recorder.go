@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	writer "github.com/ipfs/go-log/writer"
+	writer "github.com/TRON-US/go-log/writer"
 	opentrace "github.com/opentracing/opentracing-go"
 )
 
