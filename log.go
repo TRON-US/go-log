@@ -6,8 +6,8 @@ package log
 import (
 	"time"
 
-	"github.com/TRON-US/zap"
-	"github.com/steveyeom/go-btfs-logclient/logclient"
+	"github.com/TRON-US/go-btfs-collect-client/logclient"
+	"go.uber.org/zap"
 )
 
 // StandardLogger provides API compatibility with standard printf loggers
@@ -34,7 +34,7 @@ type EventLogger interface {
 }
 
 // Logger retrieves an event logger by name
-func Logger(system string, outChan chan []logclient.Entry) *ZapEventLogger {
+func Logger(system string) *ZapEventLogger {
 	if len(system) == 0 {
 		setuplog := getLogger("setup-logger")
 		setuplog.Error("Missing name parameter")

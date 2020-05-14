@@ -1,5 +1,9 @@
 github.com/BurntSushi/toml v0.3.1 h1:WXkYYl6Yr3qBf1K79EBnL4mak0OimBfB0XUf9Vl28OQ=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
+github.com/TRON-US/go-btfs-collect-client v0.0.1 h1:pyJzgLSiT0xPGhvq4OKI/f3SI5vYwCmkpqeKK7xiR9A=
+github.com/TRON-US/go-btfs-collect-client v0.0.1/go.mod h1:BV2W6GMyfvDKLuFo4PkYEtHQJMTe9+JJNu1PsjHxh2Y=
+github.com/TRON-US/zap v1.50.1 h1:s1P84JoGuZbwm2ecTxOYjD6QlRnZ0ElFCID2Ym7Afb8=
+github.com/TRON-US/zap v1.50.1/go.mod h1:whmc3raz+j6SXWR5ORc5xEFPFtUnP2zKzWWc7s5BVN8=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=

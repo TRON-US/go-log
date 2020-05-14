@@ -7,9 +7,9 @@ import (
 	"regexp"
 	"sync"
 
-	"github.com/TRON-US/zap"
-	"github.com/TRON-US/zap/zapcore"
-	logclient "github.com/steveyeom/go-btfs-logclient/logclient"
+	logclient "github.com/TRON-US/go-btfs-collect-client/logclient"
+	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 )
 
 func init() {

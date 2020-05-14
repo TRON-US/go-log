@@ -1,8 +1,10 @@
 module github.com/TRON-US/go-log/v2
 
 require (
-	github.com/steveyeom/go-btfs-logclient v0.0.0-20200511210241-1e009aafe09d
-	github.com/TRON-US/zap v2.0.0
+	github.com/TRON-US/go-btfs-collect-client v0.0.1
+	go.uber.org/zap v1.4.1
 )
 
 go 1.12
+
+replace go.uber.org/zap => github.com/TRON-US/zap v1.50.1
