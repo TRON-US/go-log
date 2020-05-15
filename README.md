@@ -53,14 +53,9 @@ logging.SetLogLevel("foo", "info")
 
 ## Contribute
 
-Feel free to join in. All welcome. Open an [issue](https://github.com/TRON-US/go-log/issues)!
+PRs are welcome!
 
-This repository falls under the BTFS [Code of Conduct](https://github.com/TRON-US/community/blob/master/code-of-conduct.md).
-
-### Want to hack on BTFS?
-
-[![](https://cdn.rawgit.com/jbenet/contribute-btfs-gif/master/img/contribute.gif)](https://github.com/btfs/community/blob/master/contributing.md)
 
 ## License
 
-MIT
+MIT @ TRON-US
