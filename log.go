@@ -14,6 +14,7 @@ import (
 	log2 "github.com/ipfs/go-log/v2"
 	writer "github.com/ipfs/go-log/writer"
 
+	logclient "github.com/TRON-US/go-btfs-collect-client/logclient"
 	opentrace "github.com/opentracing/opentracing-go"
 	otExt "github.com/opentracing/opentracing-go/ext"
 	"go.uber.org/zap"
@@ -159,6 +160,17 @@ func Logger(system string) *ZapEventLogger {
 		system = "undefined"
 	}
 	logger := log2.Logger(system)
+	return &ZapEventLogger{system: system, SugaredLogger: logger.SugaredLogger}
+}
+
+// Logger retrieves an event logger by name
+func LoggerWithOutChannel(system string, outChan chan []logclient.Entry) *ZapEventLogger {
+	if len(system) == 0 {
+		setuplog := Logger("setup-logger")
+		setuplog.Error("Missing name parameter")
+		system = "undefined"
+	}
+	logger := log2.LoggerWithChannel(system, outChan)
 	return &ZapEventLogger{system: system, SugaredLogger: logger.SugaredLogger}
 }
 
