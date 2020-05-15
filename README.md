@@ -1,19 +1,10 @@
 # go-log
 
-[![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io)
-[![](https://img.shields.io/badge/project-BTFS-blue.svg?style=flat-square)](http://btfs.io/)
-[![](https://img.shields.io/badge/freenode-%23btfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23btfs)
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-[![GoDoc](https://godoc.org/github.com/TRON-US/go-log?status.svg)](https://godoc.org/github.com/TRON-US/go-log)
-[![Build Status](https://travis-ci.org/TRON-US/go-log.svg?branch=master)](https://travis-ci.org/TRON-US/go-log)
-
-<!---[![Coverage Status](https://coveralls.io/repos/github/TRON-US/go-log/badge.svg?branch=master)](https://coveralls.io/github/TRON-US/go-log?branch=master)--->
-
-
 > The logging library used by go-btfs
 
 go-log wraps [zap](https://github.com/uber-go/zap) to provide a logging facade. go-log manages logging
 instances and allows for their levels to be controlled individually.
+
 
 ## Install
 
