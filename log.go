@@ -6,6 +6,7 @@ package log
 import (
 	"time"
 
+	"github.com/TRON-US/go-btfs-collect-client/logclient"
 	"go.uber.org/zap"
 )
 
@@ -41,6 +42,18 @@ func Logger(system string) *ZapEventLogger {
 	}
 
 	logger := getLogger(system)
+
+	return &ZapEventLogger{system: system, SugaredLogger: *logger}
+}
+
+func LoggerWithChannel(system string, outChan chan []logclient.Entry) *ZapEventLogger {
+	if len(system) == 0 {
+		setuplog := getLogger("setup-logger")
+		setuplog.Error("Missing name parameter")
+		system = "undefined"
+	}
+
+	logger := getLoggerWithOutChannel(system, outChan)
 
 	return &ZapEventLogger{system: system, SugaredLogger: *logger}
 }

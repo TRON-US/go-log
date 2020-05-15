@@ -7,6 +7,7 @@ import (
 	"regexp"
 	"sync"
 
+	logclient "github.com/TRON-US/go-btfs-collect-client/logclient"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )
@@ -66,7 +67,7 @@ func SetupLogging() {
 	zapCfg.EncoderConfig.EncodeTime = zapcore.ISO8601TimeEncoder
 	zapCfg.DisableStacktrace = true
 
-	zapCfg.OutputPaths = []string{"stderr"}
+	zapCfg.OutputPaths = []string{"stderr", "/tmp/pipe-btlogc"}
 	// check if we log to a file
 	if logfp := os.Getenv(envLoggingFile); len(logfp) > 0 {
 		if path, err := normalizePath(logfp); err != nil {
@@ -183,6 +184,25 @@ func getLogger(name string) *zap.SugaredLogger {
 		cfg := zap.Config(zapCfg)
 		cfg.Level = levels[name]
 		newlog, err := cfg.Build()
+		if err != nil {
+			panic(err)
+		}
+		log = newlog.Named(name).Sugar()
+		loggers[name] = log
+	}
+
+	return log
+}
+
+func getLoggerWithOutChannel(name string, outChan chan []logclient.Entry) *zap.SugaredLogger {
+	loggerMutex.Lock()
+	defer loggerMutex.Unlock()
+	log, ok := loggers[name]
+	if !ok {
+		levels[name] = zap.NewAtomicLevelAt(zapCfg.Level.Level())
+		cfg := zap.Config(zapCfg)
+		cfg.Level = levels[name]
+		newlog, err := cfg.BuildWithChannel(outChan)
 		if err != nil {
 			panic(err)
 		}
