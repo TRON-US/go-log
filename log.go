@@ -159,7 +159,7 @@ func Logger(system string) *ZapEventLogger {
 		setuplog.Error("Missing name parameter")
 		system = "undefined"
 	}
-	logger := log2.Logger(system, nil)
+	logger := log2.Logger(system)
 	return &ZapEventLogger{system: system, SugaredLogger: logger.SugaredLogger}
 }
 
@@ -170,7 +170,7 @@ func LoggerWithOutChannel(system string, outChan chan []logclient.Entry) *ZapEve
 		setuplog.Error("Missing name parameter")
 		system = "undefined"
 	}
-	logger := log2.Logger(system, outChan)
+	logger := log2.LoggerWithChannel(system, outChan)
 	return &ZapEventLogger{system: system, SugaredLogger: logger.SugaredLogger}
 }
 
