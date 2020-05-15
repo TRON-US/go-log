@@ -1,16 +1,16 @@
 # go-log
 
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io)
-[![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](http://ipfs.io/)
-[![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23ipfs)
+[![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](http://btfs.io/)
+[![](https://img.shields.io/badge/freenode-%23btfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23btfs)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-[![GoDoc](https://godoc.org/github.com/ipfs/go-log?status.svg)](https://godoc.org/github.com/ipfs/go-log)
-[![Build Status](https://travis-ci.org/ipfs/go-log.svg?branch=master)](https://travis-ci.org/ipfs/go-log)
+[![GoDoc](https://godoc.org/github.com/TRON-US/go-log?status.svg)](https://godoc.org/github.com/TRON-US/go-log)
+[![Build Status](https://travis-ci.org/TRON-US/go-log.svg?branch=master)](https://travis-ci.org/TRON-US/go-log)
 
-<!---[![Coverage Status](https://coveralls.io/repos/github/ipfs/go-log/badge.svg?branch=master)](https://coveralls.io/github/ipfs/go-log?branch=master)--->
+<!---[![Coverage Status](https://coveralls.io/repos/github/TRON-US/go-log/badge.svg?branch=master)](https://coveralls.io/github/TRON-US/go-log?branch=master)--->
 
 
-> The logging library used by go-ipfs
+> The logging library used by go-btfs
 
 go-log wraps [zap](https://github.com/uber-go/zap) to provide a logging facade. go-log manages logging
 instances and allows for their levels to be controlled individually.
@@ -18,7 +18,7 @@ instances and allows for their levels to be controlled individually.
 ## Install
 
 ```sh
-go get github.com/ipfs/go-log
+go get github.com/TRON-US/go-log
 ```
 
 ## Usage
@@ -53,13 +53,13 @@ logging.SetLogLevel("foo", "info")
 
 ## Contribute
 
-Feel free to join in. All welcome. Open an [issue](https://github.com/ipfs/go-log/issues)!
+Feel free to join in. All welcome. Open an [issue](https://github.com/TRON-US/go-log/issues)!
 
-This repository falls under the IPFS [Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
+This repository falls under the IPFS [Code of Conduct](https://github.com/TRON-US/community/blob/master/code-of-conduct.md).
 
 ### Want to hack on IPFS?
 
-[![](https://cdn.rawgit.com/jbenet/contribute-ipfs-gif/master/img/contribute.gif)](https://github.com/ipfs/community/blob/master/contributing.md)
+[![](https://cdn.rawgit.com/jbenet/contribute-btfs-gif/master/img/contribute.gif)](https://github.com/btfs/community/blob/master/contributing.md)
 
 ## License
 
