@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	writer "github.com/TRON-US/go-log/writer"
+	writer "github.com/ipfs/go-log/writer"
 	opentrace "github.com/opentracing/opentracing-go"
 )
 

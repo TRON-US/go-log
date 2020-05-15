@@ -1,13 +1,13 @@
 package log
 
 import (
-	tracer "github.com/TRON-US/go-log/tracer"
-	lwriter "github.com/TRON-US/go-log/writer"
+	tracer "github.com/ipfs/go-log/tracer"
+	lwriter "github.com/ipfs/go-log/writer"
 	"os"
 
 	opentrace "github.com/opentracing/opentracing-go"
 
-	log2 "github.com/TRON-US/go-log/v2"
+	log2 "github.com/ipfs/go-log/v2"
 )
 
 func init() {

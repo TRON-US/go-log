@@ -11,12 +11,12 @@ import (
 	"runtime"
 	"time"
 
-	log2 "github.com/TRON-US/go-log/v2"
-	writer "github.com/TRON-US/go-log/writer"
+	log2 "github.com/ipfs/go-log/v2"
+	writer "github.com/ipfs/go-log/writer"
 
+	logclient "github.com/TRON-US/go-btfs-collect-client/logclient"
 	opentrace "github.com/opentracing/opentracing-go"
 	otExt "github.com/opentracing/opentracing-go/ext"
-	logclient "github.com/steveyeom/go-btfs-logclient/logclient"
 	"go.uber.org/zap"
 )
 
