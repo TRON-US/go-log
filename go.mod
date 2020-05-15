@@ -2,7 +2,7 @@ module github.com/TRON-US/go-log/v2
 
 require (
 	github.com/TRON-US/go-btfs-collect-client v0.0.1
-	go.uber.org/zap v1.4.1
+	go.uber.org/zap v1.14.1
 )
 
 go 1.12
