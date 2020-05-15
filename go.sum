@@ -4,6 +4,8 @@ github.com/TRON-US/go-btfs-collect-client v0.0.1 h1:pyJzgLSiT0xPGhvq4OKI/f3SI5vY
 github.com/TRON-US/go-btfs-collect-client v0.0.1/go.mod h1:BV2W6GMyfvDKLuFo4PkYEtHQJMTe9+JJNu1PsjHxh2Y=
 github.com/TRON-US/go-log/v2 v2.5.0 h1:4eAZt8VSUqPK0Z4wYM4hiJV94UwK7oEDj1UbZXhvSYs=
 github.com/TRON-US/go-log/v2 v2.5.0/go.mod h1:eZs4Xt4ZUJQFM3DlanGhy7TkwwawCZcSByscwkWG+dw=
+github.com/TRON-US/go-log/v2 v2.5.1 h1:ymcCEmphsfT54jSHeE+PXz5/mfJ7UYOvInFmYotCXG0=
+github.com/TRON-US/go-log/v2 v2.5.1/go.mod h1:SOJdCmgFw0N+XirGv2TrOuBTb1+Kf1kmausLNAvXtJY=
 github.com/TRON-US/zap v1.50.1 h1:s1P84JoGuZbwm2ecTxOYjD6QlRnZ0ElFCID2Ym7Afb8=
 github.com/TRON-US/zap v1.50.1/go.mod h1:whmc3raz+j6SXWR5ORc5xEFPFtUnP2zKzWWc7s5BVN8=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
