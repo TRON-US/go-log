@@ -15,6 +15,7 @@ import (
 	writer "github.com/ipfs/go-log/writer"
 
 	logclient "github.com/TRON-US/go-btfs-collect-client/logclient"
+	u "github.com/ipfs/go-ipfs-util"
 	opentrace "github.com/opentracing/opentracing-go"
 	otExt "github.com/opentracing/opentracing-go/ext"
 	"go.uber.org/zap"
@@ -152,6 +153,8 @@ type EventLogger interface {
 
 var _ EventLogger = Logger("test-logger")
 
+var logCollectEnabled = u.GetenvBool("LOG_COLLECT")
+
 // Logger retrieves an event logger by name
 func Logger(system string) *ZapEventLogger {
 	if len(system) == 0 {
@@ -159,8 +162,18 @@ func Logger(system string) *ZapEventLogger {
 		setuplog.Error("Missing name parameter")
 		system = "undefined"
 	}
-	logger := log2.Logger(system)
+	var logger *log2.ZapEventLogger
+	if !logCollectEnabled {
+		logger = log2.Logger(system)
+	} else {
+		logger = log2.LoggerWithChannel(system, logclient.LogOutputChan)
+	}
+
 	return &ZapEventLogger{system: system, SugaredLogger: logger.SugaredLogger}
+}
+
+func LogCollectEnabled() bool {
+	return logCollectEnabled
 }
 
 // Logger retrieves an event logger by name
